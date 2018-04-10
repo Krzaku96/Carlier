@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1523397647 source:c:\users\user\desktop\6semestr\spd\carlier\main.cpp
+	<stdio.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<cstring>
+	<queue>
+	<vector>
+
+1523397799 source:c:\users\user\desktop\6semestr\spd\carlier\quest.cpp
+	"Quest.h"
+
+1523402999 c:\users\user\desktop\6semestr\spd\carlier\quest.h
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<math.h>
+	<queue>
+	<functional>
+
+1523402701 source:c:\users\user\desktop\6semestr\spd\carlier\schrage.cpp
+	"Schrage.h"
+
+1523402659 c:\users\user\desktop\6semestr\spd\carlier\schrage.h
+	"Quest.h"
+
