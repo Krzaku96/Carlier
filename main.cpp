@@ -5,13 +5,16 @@
 #include <cstring>
 #include <queue>
 #include <vector>
+#include "Schrage.h"
 
 using namespace std;
 
 
 int main()
 {
-
+	Schrage schrage;
+	schrage.Read();
+	cout << schrage.Schrage_with() << endl;
 	return 0;
 }
 /*

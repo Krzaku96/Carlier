@@ -8,26 +8,26 @@ using namespace std;
 
 class Schrage
 {
+	int number_of_tasks;
 public:
 
-Quest tab[1000];
+	Quest tab[1000];
 
-     priority_queue<Quest,vector<Quest>,Nset> N;
+    priority_queue<Quest,vector<Quest>,Nset> N;
 	priority_queue<Quest,vector<Quest>,Gset> G;
 
-friend bool operator<(const Quest& q1, const Quest& q2);
-//struct Nset;
-//struct Gset;
+	friend bool operator<(const Quest& q1, const Quest& q2);
+	//struct Nset;
+	//struct Gset;
 
-bool Read(int n, int number_of_tasks);
-int Sort(int number_of_tasks);
-void Display(int number_of_tasks);
-int Schrage_without(int n);
-int Schrage_with(int n);
+	bool Read();
+	void Sort();
+	void Display();
+	int Schrage_without();
+	int Schrage_with();
 
-
- Schrage();
- ~Schrage();
+	 Schrage();
+	 ~Schrage();
 };
 
 

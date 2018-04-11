@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int Schrage::Schrage_with(int n)
+int Schrage::Schrage_with()
 {
 	int number_of_tasks;
 	int Cmax=0;
@@ -11,7 +11,7 @@ int Schrage::Schrage_with(int n)
 	tab[0].r=0;
 	Quest l,e; //aktualnie wykonywane zadanie
 
-  l.q=1000;
+  	l.q=1000;
 	for (int i=1; i<number_of_tasks; i++)
 	{
 		N.push(tab[i]);
@@ -19,7 +19,6 @@ int Schrage::Schrage_with(int n)
 
 	while(!G.empty() || !N.empty())
    {
-
 		while (!N.empty() && N.top().r<=t)
 		{
 		     e=N.top();
@@ -40,18 +39,17 @@ int Schrage::Schrage_with(int n)
 			t=N.top().r;
 		else
 		{
-		     e=G.top();
-		     G.pop();
-		     l=e;
+		    e=G.top();
+		    G.pop();
+		    l=e;
 			t=t+e.p;
 			Cmax=max(Cmax, t+e.q);
-
 		}
    }
-return Cmax;
+	return Cmax;
 }
 
-int Schrage::Schrage_without(int n)
+int Schrage::Schrage_without()
 {
 
 	int number_of_tasks;
@@ -85,12 +83,12 @@ int Schrage::Schrage_without(int n)
 	return Cmax;
 }
 
-bool Schrage::Read(int n, int number_of_tasks)
+bool Schrage::Read()
 {
 	ifstream file;
-	file.open( "SCHRAGE1.DAT", ios::in);
+	file.open( "SCHRAGE3.DAT", ios::in);
+	int n=0;
 	file >> n;
-//	tab=new Quest[n+1];
 	number_of_tasks=n+1;
 	for(int i=1;i<=n;i++)
 	    file >> tab[i];
@@ -99,16 +97,15 @@ bool Schrage::Read(int n, int number_of_tasks)
 	return true;
 }
 
-int Schrage::Sort(int number_of_tasks)
+void Schrage::Sort()
 {
 	for( int i = 0; i < number_of_tasks; i++ )
 		for(int j=0; j<number_of_tasks-1; j++)
 			if( tab[j].r > tab[j+1].r )
 				swap(tab[j], tab[j+1]);
-	return int(tab);
 }
 
-void Schrage::Display(int number_of_tasks)
+void Schrage::Display()
 {
 	for(int i=1;i<number_of_tasks;i++)
 		cout << tab[i];
