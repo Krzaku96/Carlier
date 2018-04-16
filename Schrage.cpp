@@ -1,4 +1,5 @@
 #include "Schrage.h"
+#include "Carlier.h"
 
 using namespace std;
 
@@ -55,7 +56,7 @@ int Schrage::Schrage_without()
 	int number_of_tasks;
 	int Cmax=0;
 	int t=0;
-	int k=0;
+//	int k=0;
 	number_of_tasks=tab[0].r;
 	tab[0].r=0;
 

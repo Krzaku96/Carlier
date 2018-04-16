@@ -12,9 +12,13 @@ class Schrage
 public:
 
 	Quest tab[1000];
+	int Cmax;
+	int Cmax_without;
+	int Cmax_with;
 
-    priority_queue<Quest,vector<Quest>,Nset> N;
-	priority_queue<Quest,vector<Quest>,Gset> G;
+
+     priority_queue<Quest,vector<Quest>,Nset> N;
+     priority_queue<Quest,vector<Quest>,Gset> G;
 
 	friend bool operator<(const Quest& q1, const Quest& q2);
 	//struct Nset;

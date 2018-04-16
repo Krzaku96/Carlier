@@ -19,6 +19,7 @@ public:
 	int r,p,q;
 	int task_number;
 	int l;
+	int C;
 
 friend istream& operator >> (istream& enter, Quest& request);
 friend ostream& operator << (ostream& exit, Quest& request);

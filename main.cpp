@@ -5,16 +5,27 @@
 #include <cstring>
 #include <queue>
 #include <vector>
-#include "Schrage.h"
+#include "Carlier.h"
 
 using namespace std;
+
+int n=0;
 
 
 int main()
 {
+      Carlier ob;
+      ob.Read();
+      ob.Sort();
+      ob.Schrage_without();
+      ob.Display();
+
+     cout << "U: " << ob.U << "UB: " << ob.Cmax_without << "LB: " << ob.Cmax_with;
+/*
 	Schrage schrage;
 	schrage.Read();
 	cout << schrage.Schrage_with() << endl;
+	*/
 	return 0;
 }
 /*

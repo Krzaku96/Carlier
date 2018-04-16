@@ -32,6 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Carlier.cpp" />
+		<Unit filename="Carlier.h" />
+		<Unit filename="Quest.cpp" />
+		<Unit filename="Quest.h" />
+		<Unit filename="Schrage.cpp" />
+		<Unit filename="Schrage.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
