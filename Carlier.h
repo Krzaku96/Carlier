@@ -9,20 +9,21 @@ using namespace std;
 class Carlier : public Schrage
 {
      public:
-     Quest tab2[1000];
+     Carlier();
+     ~Carlier();
+     Quest tab2[3000];
      int U;
      int UB;
      int LB;
      int a,b,c;
 
 
-     int carlier(Carlier &car);
-     int find_a(int &a, int &b);
-     int find_b(int &b);
-     int find_c(int a, int b);
+     int carlier();
+     int find_a();
+     int find_b();
+     int find_c();
 
-     Carlier();
-     ~Carlier();
+
 };
 
 

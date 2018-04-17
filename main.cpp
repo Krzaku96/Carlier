@@ -16,11 +16,14 @@ int main()
       Carlier ob;
       ob.Read();
       ob.Sort();
-      ob.Schrage_without();
       ob.Display();
-      ob.carlier(ob);
+    //  ob.Schrage_without();
+      //ob.Schrage_with();
+      ob.carlier();
 
-     cout << "U: " << ob.U << "UB: " << ob.Cmax_without << "LB: " << ob.Cmax_with;
+
+     cout << "U: " << ob.U;
+     //<< " UB: " << ob.Cmax_without << " LB: " << ob.Cmax_with;
 /*
 	Schrage schrage;
 	schrage.Read();
@@ -28,23 +31,4 @@ int main()
 	*/
 	return 0;
 }
-/*
-int Calier(int n, priority_queue<Quest,vector<Quest>,Nset> N, priority_queue<Quest,vector<Quest>,Gset> G, int UB)
-{
-	int U=schrage(n, N, G);
-	if(!Gcopy.empty())
-	{
-		Ghelp.push_back(Gcopy.top());
-		Gcopy.pop();
-	}
-
-	if (U<UB)
-		UB=U;
-	//abc
-	cout << b << endl;
-	cout << Ghelp[b].q << endl;
-	if (c==0)
-		return U;
-}
-*/
 

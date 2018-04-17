@@ -46,6 +46,7 @@ int Schrage::Schrage_with()
 			t=t+e.p;
 			Cmax=max(Cmax, t+e.q);
 		}
+		Cmax_with = Cmax;
    }
 	return Cmax;
 }
@@ -80,6 +81,7 @@ int Schrage::Schrage_without()
 			Cmax=max(Cmax, t+G.top().q);
 			G.pop();
 		}
+		Cmax_without = Cmax;
 	}
 	return Cmax;
 }
@@ -87,7 +89,7 @@ int Schrage::Schrage_without()
 bool Schrage::Read()
 {
 	ifstream file;
-	file.open( "SCHRAGE3.DAT", ios::in);
+	file.open( "SCHRAGE9.DAT", ios::in);
      int n;
 	file >> n;
 	number_of_tasks=n+1;
