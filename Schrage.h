@@ -5,16 +5,18 @@
 
 using namespace std;
 
+extern int n;
 
 class Schrage
 {
-	int number_of_tasks;
+
 public:
 
 	Quest tab[1000];
 	int Cmax;
 	int Cmax_without;
 	int Cmax_with;
+	int number_of_tasks;
 
 
      priority_queue<Quest,vector<Quest>,Nset> N;

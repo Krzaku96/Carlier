@@ -9,7 +9,6 @@
 
 using namespace std;
 
-int n=0;
 
 
 int main()
@@ -19,6 +18,7 @@ int main()
       ob.Sort();
       ob.Schrage_without();
       ob.Display();
+      ob.carlier(ob);
 
      cout << "U: " << ob.U << "UB: " << ob.Cmax_without << "LB: " << ob.Cmax_with;
 /*

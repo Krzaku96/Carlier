@@ -15,18 +15,11 @@ class Carlier : public Schrage
      int LB;
      int a,b,c;
 
-     int r_new_for_c;
-     int p_sum;
-     int q_new_for_c;
 
-     int r_c;
-     int q_c;
-     int nr_c;
-
-     int carlier();
-     int find_a();
-     int find_b();
-     int find_c();
+     int carlier(Carlier &car);
+     int find_a(int &a, int &b);
+     int find_b(int &b);
+     int find_c(int a, int b);
 
      Carlier();
      ~Carlier();

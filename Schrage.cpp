@@ -5,7 +5,7 @@ using namespace std;
 
 int Schrage::Schrage_with()
 {
-	int number_of_tasks;
+//	int number_of_tasks;
 	int Cmax=0;
 	int t=0;
 	number_of_tasks=tab[0].r;
@@ -53,7 +53,7 @@ int Schrage::Schrage_with()
 int Schrage::Schrage_without()
 {
 
-	int number_of_tasks;
+	//int number_of_tasks;
 	int Cmax=0;
 	int t=0;
 //	int k=0;
@@ -88,7 +88,7 @@ bool Schrage::Read()
 {
 	ifstream file;
 	file.open( "SCHRAGE3.DAT", ios::in);
-	int n=0;
+     int n;
 	file >> n;
 	number_of_tasks=n+1;
 	for(int i=1;i<=n;i++)

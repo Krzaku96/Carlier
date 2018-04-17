@@ -5,71 +5,91 @@ using namespace std;
 Carlier::Carlier() {}
 Carlier::~Carlier() {}
 
-
-
-int Carlier::carlier()
+int Carlier::carlier(Carlier &car)
 {
-     int n;
-     U = Schrage_without();
+     a=0;b=0,c=-1;
+     U=0;
+     UB=INT_MAX;
+     LB=0;
 
-     if(U < UB)
+     int r_new_for_c=INT_MAX;
+     int p_sum=0;
+     int q_new_for_c=INT_MAX;
+     int r_c=0;
+     int q_c=0;
+     int nr_c=0;
+     int i=0;
+
+     car.U = car.Schrage_without();
+
+     if(car.U < car.UB)
      {
-          UB = U;
-		for (int i = 0; i < n; i++)
+          car.UB = car.U;
+		for (i = 0; i < number_of_tasks; i++)
 		{
-			tab2[i] = tab[i];
+			car.tab2[i] = car.tab[i];
 		}
-     find_a();
-     find_b();
-     find_c();
-     }
-     if(c==0)
-     {
-          return U;
      }
 
-     for(int i=c+1; i<b; i++)
+     a = car.find_a(a,b);
+     b = car.find_b(b);
+     c = car.find_c(a,b);
+
+     if(c==-1)
      {
-          r_new_for_c = min(r_new_for_c, tab[i].r);
-          q_new_for_c = min(q_new_for_c, tab[i].q);
+          return car.U;
+     }
+
+     for(i=c+1; i<=b; i++)
+     {
+          r_new_for_c = min(r_new_for_c, car.tab[i].r);
+          q_new_for_c = min(q_new_for_c, car.tab[i].q);
           p_sum+= tab[i].p;
      }
 
-     tab[c].r = max(tab[c].r, r_new_for_c + p_sum);
 
-     LB= Schrage_with();
+          nr_c = car.tab[c].task_number;
+          r_c = car.tab[c].r;
 
-     if(LB < UB)
+
+     car.tab[c].r = max(car.tab[c].r, r_new_for_c + p_sum);
+
+     LB= car.Schrage_with();
+
+     if(LB < car.UB)
      {
-         UB=carlier();
+         car.UB=car.carlier(car);
      }
-     for (int i = 0; i < n; i++)
+     for (i = 0; i < number_of_tasks; i++)
 	{
-		if (nr_c == tab[i].task_number)
-			tab[i].r = r_c;
+		if (nr_c == car.tab[i].task_number)
+			car.tab[i].r = r_c;
 	}
 
-	tab[c].q= max(tab[c].q, q_new_for_c + p_sum);
+          q_c = tab[c].q;
 
-     LB = Schrage_with();
 
-     if(LB < UB)
+	car.tab[c].q= max(car.tab[c].q, q_new_for_c + p_sum);
+
+     LB = car.Schrage_with();
+
+     if(LB < car.UB)
      {
-          UB = carlier();
+          U = car.carlier(car);
      }
 
-     for(int i=0; i<n; i++)
+     for(i=0; i<number_of_tasks; i++)
      {
-          if(nr_c == tab[i].task_number)
+          if(nr_c == car.tab[i].task_number)
           {
-               tab[i].q = q_new_for_c;
+               car.tab[i].q = q_c;
           }
      }
 
-     return U;
+     return car.U;
 }
 
-int Carlier::find_a()
+int Carlier::find_a(int &a, int &b)
 {
      int sum = 0;
      int i;
@@ -89,10 +109,11 @@ int Carlier::find_a()
 }
 
 
-int Carlier::find_b()
+int Carlier::find_b(int &b)
 {
-     int n;
-     for(int i=n-1; i>0; i--)
+     int i=0;
+     b=0;
+     for(i=number_of_tasks-1; i>0; i--)
      {
           if(Cmax_without == tab[i].C + tab[i].q)
           {
@@ -103,9 +124,11 @@ int Carlier::find_b()
      return b;
 }
 
-int Carlier::find_c()
+int Carlier::find_c(int a, int b)
 {
-     for(int i=b; i>=a; i--)
+     c=-1;
+     int i;
+     for(i=b; i>=a; i--)
      {
           if(tab[i].q < tab[b].q)
           {
@@ -113,7 +136,9 @@ int Carlier::find_c()
                break;
           }
      }
+
      return c;
 }
+
 
 

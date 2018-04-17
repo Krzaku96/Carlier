@@ -26,7 +26,7 @@
 1523402659 c:\users\user\desktop\6semestr\spd\carlier\schrage.h
 	"Quest.h"
 
-1523911214 source:c:\users\user\desktop\carlier\carlier\main.cpp
+1523990527 source:c:\users\user\desktop\carlier\carlier\main.cpp
 	<stdio.h>
 	<iostream>
 	<fstream>
@@ -36,10 +36,10 @@
 	<vector>
 	"Carlier.h"
 
-1523910959 c:\users\user\desktop\carlier\carlier\schrage.h
+1523991119 c:\users\user\desktop\carlier\carlier\schrage.h
 	"Quest.h"
 
-1523903716 c:\users\user\desktop\carlier\carlier\quest.h
+1523989648 c:\users\user\desktop\carlier\carlier\quest.h
 	<iostream>
 	<fstream>
 	<string>
@@ -51,13 +51,13 @@
 1523897098 source:c:\users\user\desktop\carlier\carlier\quest.cpp
 	"Quest.h"
 
-1523902195 source:c:\users\user\desktop\carlier\carlier\schrage.cpp
+1523990760 source:c:\users\user\desktop\carlier\carlier\schrage.cpp
 	"Schrage.h"
 	"Carlier.h"
 
-1523913145 c:\users\user\desktop\carlier\carlier\carlier.h
+1523991334 c:\users\user\desktop\carlier\carlier\carlier.h
 	"Schrage.h"
 
-1523914238 source:c:\users\user\desktop\carlier\carlier\carlier.cpp
+1523991405 source:c:\users\user\desktop\carlier\carlier\carlier.cpp
 	"Carlier.h"
 
